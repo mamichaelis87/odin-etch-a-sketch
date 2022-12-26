@@ -3,3 +3,8 @@ body {
     color: gray;
     background-color: antiquewhite;
 }
+.row {
+    background-color: salmon;
+    padding:10px;
+    border: 4px solid burlywood;
+}
