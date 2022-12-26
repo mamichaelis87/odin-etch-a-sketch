@@ -15,4 +15,4 @@ function createColumns(row) {
 }
 
 const rows = document.querySelectorAll(".row");
-rows.forEach(createColumns)
+rows.forEach(createColumns);
