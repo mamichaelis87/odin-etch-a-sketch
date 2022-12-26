@@ -23,8 +23,12 @@ body {
     flex: auto;
 }
 
-.column {
-    border:4px dotted seashell;
+.block {
+    /* border:4px dotted seashell; */
     /* padding: 10px; */
     flex: auto;
+}
+
+#hovering {
+    background-color: seashell;
 }
