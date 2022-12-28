@@ -21,9 +21,14 @@ function changeBackground(square) {
     square.setAttribute('id', "hovering")
 }
 
+function randomBackground(square) {
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+    square.style.backgroundColor = "#" + randomColor;
+}
+
 let blocks = document.querySelectorAll(".block");
 blocks.forEach((block)=>{
-    block.addEventListener("mouseover", () => {changeBackground(block);
+    block.addEventListener("mouseover", () => {randomBackground(block);
     })})
 
 const gridSizeButton = document.querySelector(".gridSize");
@@ -66,8 +71,8 @@ function setGridSize() {
     blocks = document.querySelectorAll(".block");
 
     blocks.forEach((block)=>{
-        block.addEventListener("mouseover", () => {changeBackground(block);
-        })})
+        block.addEventListener("mouseover", () => {randomBackground(block)}
+        )})
 
 }
 
