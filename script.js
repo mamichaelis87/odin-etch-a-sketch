@@ -36,9 +36,9 @@ function getGridSize() {
    return userGridSize;
 }
 
-gridSizeButton.addEventListener('click', ()=>{getGridSize()});
+//gridSizeButton.addEventListener('click', ()=>{getGridSize()});
 
-function setGridSize(newGridSize) {
+function setGridSize() {
 
     rows = document.querySelectorAll(".row");
     blocks = document.querySelectorAll(".block");
@@ -46,7 +46,7 @@ function setGridSize(newGridSize) {
     blocks.forEach((block) => {block.remove()});
     rows.forEach((row) => {row.remove()});
     
-   // let newGridSize = getGridSize();
+   let newGridSize = getGridSize();
 
    for (let i=0; i<newGridSize; i++) { 
     let div = document.createElement('div');
@@ -71,5 +71,6 @@ function setGridSize(newGridSize) {
 
 }
 
+gridSizeButton.addEventListener('click', ()=>{setGridSize()});
 
 
