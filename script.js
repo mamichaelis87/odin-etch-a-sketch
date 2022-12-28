@@ -27,6 +27,9 @@ function randomBackground(square) {
 }
 
 let blocks = document.querySelectorAll(".block");
+// blocks.forEach((block)=>{
+//     block.addEventListener("mouseover", () => {changeBackground(block);
+//     })})
 blocks.forEach((block)=>{
     block.addEventListener("mouseover", () => {randomBackground(block);
     })})
@@ -69,6 +72,10 @@ function setGridSize() {
     })
 
     blocks = document.querySelectorAll(".block");
+
+    // blocks.forEach((block)=>{
+    //     block.addEventListener("mouseover", () => {changeBackground(block);
+    //     })})
 
     blocks.forEach((block)=>{
         block.addEventListener("mouseover", () => {randomBackground(block)}
