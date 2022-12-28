@@ -14,14 +14,14 @@ function createColumns(row) {
     }
 }
 
-const rows = document.querySelectorAll(".row");
+let rows = document.querySelectorAll(".row");
 rows.forEach(createColumns);
 
 function changeBackground(square) {
     square.setAttribute('id', "hovering")
 }
 
-const blocks = document.querySelectorAll(".block");
+let blocks = document.querySelectorAll(".block");
 blocks.forEach((block)=>{
     block.addEventListener("mouseover", () => {changeBackground(block);
     })})
@@ -37,5 +37,39 @@ function getGridSize() {
 }
 
 gridSizeButton.addEventListener('click', ()=>{getGridSize()});
+
+function setGridSize(newGridSize) {
+
+    rows = document.querySelectorAll(".row");
+    blocks = document.querySelectorAll(".block");
+
+    blocks.forEach((block) => {block.remove()});
+    rows.forEach((row) => {row.remove()});
+    
+   // let newGridSize = getGridSize();
+
+   for (let i=0; i<newGridSize; i++) { 
+    let div = document.createElement('div');
+    div.classList.add('row');
+    container.appendChild(div);
+}
+    rows = document.querySelectorAll(".row");
+
+    rows.forEach((row)=>{
+        for (let i=0; i<newGridSize; i++) { 
+            let div = document.createElement('div');
+            div.classList.add('block');
+            row.appendChild(div);
+        }
+    })
+
+    blocks = document.querySelectorAll(".block");
+
+    blocks.forEach((block)=>{
+        block.addEventListener("mouseover", () => {changeBackground(block);
+        })})
+
+}
+
 
 
