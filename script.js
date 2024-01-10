@@ -1,5 +1,7 @@
 const container = document.querySelector(".container");
 
+const gridSizeButton = document.querySelector(".gridSize");
+
 for (let i=0; i<16; i++) { 
     let div = document.createElement('div');
     div.classList.add('row');
@@ -34,8 +36,6 @@ blocks.forEach((block)=>{
     block.addEventListener("mouseover", () => {randomBackground(block);
     })})
 
-const gridSizeButton = document.querySelector(".gridSize");
-
 function getGridSize() {
    let userGridSize = prompt("Please enter what size you would like the grid to be. (Any number between 1-100).");
    while (isNaN(userGridSize) || parseInt(userGridSize) <= 0 || parseInt(userGridSize) > 100){
@@ -60,7 +60,8 @@ function setGridSize() {
     let div = document.createElement('div');
     div.classList.add('row');
     container.appendChild(div);
-}
+    }
+
     rows = document.querySelectorAll(".row");
 
     rows.forEach((row)=>{
@@ -84,5 +85,3 @@ function setGridSize() {
 }
 
 gridSizeButton.addEventListener('click', ()=>{setGridSize()});
-
-
