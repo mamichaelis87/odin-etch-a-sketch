@@ -11,6 +11,12 @@ body {
 .size-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.size-container p {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .gridSize {
@@ -18,15 +24,24 @@ body {
     background-color: seashell;
     font-size: 24px;
     border-radius: 8px;
-    margin: 20px 0 0 60px;
+    margin-left: 20px;
+}
+
+.gridSize:hover {
+    transform: scale(1.1)
+}
+
+.gridSize:active {
+    transform: scale(1.05);
 }
 
 .container {
-    width:800px;
-    height: 800px;
+    width: 400px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    border: 2px solid brown;
 }
 
 .row {

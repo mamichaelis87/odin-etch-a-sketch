@@ -37,10 +37,7 @@ blocks.forEach((block)=>{
     })})
 
 function getGridSize() {
-   let userGridSize = prompt("Please enter what size you would like the grid to be. (Any number between 1-100).");
-   while (isNaN(userGridSize) || parseInt(userGridSize) <= 0 || parseInt(userGridSize) > 100){
-    userGridSize = prompt ("That is not an acceptable value, please enter a number between 1 and 100.");
-    }
+   let userGridSize = document.querySelector("#myRange").value;
    return userGridSize;
 }
 

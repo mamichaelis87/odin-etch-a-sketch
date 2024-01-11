@@ -8,10 +8,14 @@
 </head>
 <body>
     <div class="size-container">
-        <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        </div>
-        <button class="gridSize">Change Grid Size</button>
+        <p>Larger Pixels</p>
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <p>Smaller Pixels</p>
+        <input type="radio" name="pixelColor" class="radio" id="black" value="black">
+        <label for="black">black</label>
+        <input type="radio" name="pixelColor" class="radio" id="rainbow" value="rainbow">
+        <label for="rainbow">rainbow</label>
+        <button class="gridSize">Change Grid Pixel Size</button>
     </div>
     <div class="container"></div>
 </body>
