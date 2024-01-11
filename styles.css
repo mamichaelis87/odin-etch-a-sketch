@@ -58,6 +58,28 @@ body {
     flex: auto;
 }
 
-#hovering {
-    background-color: salmon;
+.color-choices {
+    display: flex;
+    margin-top: 20px;
 }
+
+.color-choice {
+    margin: 0 10px 0 10px;
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+

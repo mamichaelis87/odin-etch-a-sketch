@@ -19,8 +19,20 @@ function createColumns(row) {
 let rows = document.querySelectorAll(".row");
 rows.forEach(createColumns);
 
-function changeBackground(square) {
-    square.setAttribute('id', "hovering")
+function blackBackground(square) {
+    square.classList.add("black")
+}
+
+function redBackground(square) {
+    square.classList.add("red")
+}
+
+function blueBackground(square) {
+    square.classList.add("blue")
+}
+
+function yellowBackground(square) {
+    square.classList.add("yellow")
 }
 
 function randomBackground(square) {
@@ -28,12 +40,30 @@ function randomBackground(square) {
     square.style.backgroundColor = "#" + randomColor;
 }
 
+function changeBackground(square) {
+    if (document.querySelector("#black").checked) {
+        blackBackground(square);
+    }
+    else if (document.querySelector("#red").checked) {
+        redBackground(square);
+    }
+    else if (document.querySelector("#blue").checked) {
+        blueBackground(square);
+    }
+    else if (document.querySelector("#yellow").checked) {
+        yellowBackground(square);
+    }
+    else {
+        randomBackground(square);
+    }
+}
+
 let blocks = document.querySelectorAll(".block");
 // blocks.forEach((block)=>{
-//     block.addEventListener("mouseover", () => {changeBackground(block);
+//     block.addEventListener("mouseover", () => {blackBackground(block);
 //     })})
 blocks.forEach((block)=>{
-    block.addEventListener("mouseover", () => {randomBackground(block);
+    block.addEventListener("mouseover", () => {changeBackground(block);
     })})
 
 function getGridSize() {
@@ -72,11 +102,11 @@ function setGridSize() {
     blocks = document.querySelectorAll(".block");
 
     // blocks.forEach((block)=>{
-    //     block.addEventListener("mouseover", () => {changeBackground(block);
+    //     block.addEventListener("mouseover", () => {blackBackground(block);
     //     })})
 
     blocks.forEach((block)=>{
-        block.addEventListener("mouseover", () => {randomBackground(block)}
+        block.addEventListener("mouseover", () => {changeBackground(block)}
         )})
 
 }
